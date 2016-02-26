@@ -1,5 +1,5 @@
 @{
-    Page.Title = "Photo Gallery-Stage";
+    Page.Title = "Photo Gallery-Master";
 
     var db = Database.Open("PhotoGallery");
     var galleries = db.Query(@"SELECT Galleries.Id, Galleries.Name, COUNT(Photos.Id) AS PhotoCount
@@ -8,7 +8,7 @@
 }
 
 <hgroup>
-<h1>Azure CloudRoadShow Galleries Test</h1>
+<h1>Demo Gallery App</h1>
 @if (galleries.Count == 1) {
     <h2>There is one gallery</h2>
 }
